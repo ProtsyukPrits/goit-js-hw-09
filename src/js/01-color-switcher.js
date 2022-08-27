@@ -16,12 +16,13 @@ function handleStart(e) {
 
   timerStart = setInterval(() => {
     document.body.style.background = refs.getRandomHexColor();
-  }, 1000);
+  }, 500);
 }
 
 function handleStop(e) {
-  document.body.style.background = 'white';
-  clearInterval(timerStart);
-  refs.btnStart.disabled = false;
-  refs.btnStop.disabled = true;
+  if (clearInterval(timerStart)) {
+    document.body.style.background = 'white';
+    refs.btnStart.disabled = false;
+    refs.btnStop.disabled = true;
+  }
 }
