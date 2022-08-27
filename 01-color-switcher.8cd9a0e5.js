@@ -1,2 +1,0 @@
-const t={btnStart:document.querySelector("button[data-start]"),btnStop:document.querySelector("button[data-stop]"),getRandomHexColor:()=>`#${Math.floor(16777215*Math.random()).toString(16)}`};t.btnStart.addEventListener("click",(function(e){t.btnStart.disabled=!0,t.btnStop.disabled=!1,timerStart=setInterval((()=>{document.body.style.background=t.getRandomHexColor()}),500)})),t.btnStop.addEventListener("click",(function(e){clearInterval(timerStart),t.btnStart.disabled=!1,t.btnStop.disabled=!0}));
-//# sourceMappingURL=01-color-switcher.8cd9a0e5.js.map
